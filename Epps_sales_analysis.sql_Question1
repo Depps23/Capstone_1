@@ -1,0 +1,13 @@
+-- Question 1
+SELECT 
+SUM(SalesTotal) AS Total_Sales,
+MIN(SalesTotal) AS Minimum_Sales,
+MAX(SalesTotal) AS Most_Sales
+FROM online_sales
+WHERE ShiptoState LIKE 'Maryland%'
+   OR ShiptoState LIKE 'Massachusetts%'
+	  OR ShiptoState LIKE 'Maine%'
+		 OR ShiptoState LIKE 'New Jersey%';
+-- Total Sales = $8,609,433.67
+-- Minimum Sales = $2.40
+-- Maximum Sales = $13,741.60
