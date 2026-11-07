@@ -1,1 +1,15 @@
+-- Question 2
+
+SELECT
+YEAR(Date) AS Sales_Year,
+MONTH(Date) AS Sales_Month,
+SUM(SalesTotal) AS Revenue
+FROM online_sales
+WHERE ShiptoState LIKE 'Maryland%'
+	OR ShiptoState LIKE 'Massachusetts%'
+	  OR ShiptoState LIKE 'Maine%'
+		OR ShiptoState LIKE 'New Jersey%'
+GROUP BY YEAR(Date), MONTH(Date)
+ORDER BY 1 ASC
+
 
